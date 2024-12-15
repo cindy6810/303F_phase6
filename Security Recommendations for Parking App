@@ -1,0 +1,110 @@
+
+
+
+
+
+Project Phase 6: Security Recommendations
+
+
+
+
+Name: Yaling Wei
+No: 000930508
+Fall 2024 
+Mobile Application Development 
+(CPRG-303-F)
+Date: Dec 15th.2024
+
+
+
+
+
+
+
+Security Recommendations for Parking App
+
+1.What is your security recommendation? Why did you choose it?
+"The app only requests the minimum set of permissions necessary" (from Platform Interaction section of Android App Security Checklist).
+Reasons for choice:
+1.Our parking app requires several sensitive permissions based on code review:
+
+
+2. Currently lacks structured permission management
+3.Critical for protecting user privacy and data security
+4. Directly impacts core app functionality
+
+2.Who does the recommendation benefit (end-user, developer, etc.)?
+End Users:
+Protected from unnecessary data exposure
+Clear understanding of what permissions are needed and why
+Control over their personal data access
+Improved app trust and transparency
+Developers:
+Clearer permission architecture
+Reduced security liability
+Easier debugging of permission-related issues
+Simplified maintenance
+Business Stakeholders:
+Enhanced app store compliance
+Reduced risk of privacy-related incidents
+Increased user trust
+Better market reputation
+
+3.If the recommendation was found somewhere other than the provided checklist, include a link to it. 
+Direct reference from Android App Security Checklist: https://github.com/muellerberndt/android_app_security_checklist 
+Section: Platform Interaction Item: "The app only requests the minimum set of permissions necessary"
+
+4.When would the recommendation have to be implemented (based on how serious the security risk is)?
+Priority Level: High - Must be implemented before production release
+Proposed Schedule:
+Week 1: Audit and Analysis 
+oReview all current permissions
+oDocument necessary vs unnecessary permissions
+oCreate permission request flowchart
+Week 2: Implementation 
+oDevelop permission management system
+oIntegrate with existing features
+oTesting and validation
+Rationale for Urgency:
+Core security feature affecting user privacy
+Required for app store compliance
+Impacts main app functionality (navigation, image loading)
+Prevention of potential security incidents
+
+5.Why do you think your project needs your recommendation?
+Current Code Review:
+1.Navigation Features:
+
+2.Asset Management:
+
+3.User Interface:
+
+Required Permissions:
+1.ACCESS_FINE_LOCATION - For navigation
+2.READ_EXTERNAL_STORAGE - For loading parking signs
+3.INTERNET - For data communication
+4.ACCESS_NETWORK_STATE - For connectivity checks
+6.How do you think your recommendation could be applied?
+A.Permission Management System:
+
+B.Integration Example:
+
+7.How feasible would the implementation be?
+·  Technical Requirements: 
+React Native Permissions library
+Android SDK configuration updates
+Permission state management system
+·  Resource Requirements: 
+Development time: 2 weeks
+Testing time: 1 week
+Documentation: 2-3 days
+·  Implementation Challenges: 
+Handling permission denials gracefully
+Managing permission state across app
+Backward compatibility
+Testing on different Android versions
+·  Maintenance Considerations: 
+Regular permission audit needed
+Updates for new Android versions
+User feedback monitoring
+Permission-related error tracking
